@@ -27,7 +27,12 @@ header {
 	height: 30vh;
 	display: flex;
 	justify-content: space-around;
-	<!-- align-items: center; -->
+	align-items: center; 
+}
+main {
+	padding: 0 15px;
+	max-width: $content-width;
+	margin: 0 auto;
 }
 h1 {
     font-size: 3em;
