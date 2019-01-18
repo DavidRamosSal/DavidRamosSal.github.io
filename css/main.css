@@ -2,6 +2,8 @@ body {
     margin: 0;	<!-- 60px auto -->
     width: 70%;
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
