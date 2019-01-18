@@ -31,7 +31,7 @@ header {
 }
 main {
 	padding: 0 15px;
-	max-width: $content-width;
+	max-width: 800px;
 	margin: 0 auto;
 }
 h1 {
