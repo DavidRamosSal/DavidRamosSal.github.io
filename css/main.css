@@ -17,6 +17,10 @@ a {
     text-decoration: none;
     color: #425469;
 }
+a1 {
+    text-decoration: none;
+    color: #19CCAA;
+}
 a:hover {
     text-decoration: underline;
 }
@@ -37,11 +41,6 @@ main {
 	margin: 0 auto;
 }
 h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-h2 {
-    color: #19CCAA;
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
