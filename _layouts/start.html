@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+{% include head.html %}
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    
+    <nav class="navbar navbar-expand-lg navbar-themed">
+      <a class="navbar-brand" href="{{ site.baseurl }}/"><h5><b>{{ site.title }}</b></h5></a>
+    </nav>
+
+    {{ content }}
+  </main>
+
+  
+  
+  <div class="row justify-content-center align-items-center p-5">
+
+    {%- assign unfocused_color = "343a40" -%}
+    
+    Find me on:
+    {% for account in site.author %}
+    
+      {%- assign service_name = account[0] -%}
+      {%- assign service_data = site.data.social-media[service_name] -%}
+      {%- if service_data -%}    
+      <a class="social mx-3"  href="{{ service_data.url }}{{ account[1] }}"
+         style="color: #{{ unfocused_color }}"
+         onMouseOver="this.style.color='#{{ service_data.color }}'"
+         onMouseOut="this.style.color='#{{ unfocused_color }}'">
+        <i class="{{ service_data.icon }} fa-2x"></i>
+      </a>
+      {%- endif -%}
+    
+    {% endfor %}
+  
+  </div>
+
+  
+  {% include analytics.html %}
+  {% include scripts.html %}
+
+  {%- if site.buymeacoffee.enabled == true -%}
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
+  {%- endif -%}
+</body>
+
+</html>
