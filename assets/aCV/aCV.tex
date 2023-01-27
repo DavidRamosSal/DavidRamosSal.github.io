@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%
+% This CV example/template is based on my own
+% CV which I (lamely attempted) to clean up, so that
+% it's less of an eyesore and easier for others to use.
+%
+% LianTze Lim (liantze@gmail.com)
+% 13 May, 2020
+%
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+% Uncomment to enable Chinese; needs XeLaTeX
+% \usepackage{ctex}
+
+\usepackage{settings}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+
+
+\usepackage{tikz}
+\newcommand{\grade}[1]{%
+\begin{tikzpicture}
+\clip (1em-.3em,-.3em) rectangle (6em +.6em ,.3em);
+\begin{scope}
+\clip (1em-.3em,-.3em) rectangle (#1em +.6em ,.3em);
+\foreach \x in {1,2,...,6}{
+ \path[fill=black] (\x em,0) circle (.25em);
+}
+\end{scope}
+\foreach \x in {1,2,...,6}{
+ \draw (\x em,0) circle (.25em);
+}
+\end{tikzpicture}%
+}
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+
+%% Specify your last name and first name (as given in the .bib) to automatically bold your own name in the publications list. One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly for now...
+\myname{Ramos Salamanca}{David\bibnamedelima Leonardo}
+% \myname{d'Andrimont}{Raphaël}
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+\definecolor{SwishLineColour}{HTML}{000000}
+\definecolor{MarkerColour}{HTML}{000000}
+
+% Change the item prefix marke	\r if you want
+% \prefixmarker{$\diamond$}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\leftheader{%
+  {\LARGE\bfseries David Leonardo Ramos Salamanca}
+  
+  \vspace{0.2cm}
+  \makefield{\faEnvelope[regular]}{\texttt{davidramossal@gmail.com}}\makefield{\faHome}{\url{https://davidramossal.github.io/}}
+  %\makefield{\faTwitter}{\texttt{@example}}
+
+  %\makefield{\faLinkedin}
+  %{\url{https://www.linkedin.com/in/david-ramos-salamanca-888abb226/}}
+}
+
+\rightheader{~}
+\begin{fullonly}
+%\photo[r]{photo}
+%\photoscale{0.13}
+\end{fullonly}
+
+
+\title{Curriculum Vitae}
+
+%
+\begin{document}
+\makeatletter\let\mykeyfont\@keyfont\makeatother
+\makeheaders[c]
+
+%\makerubric{perfilp}
+\makerubric{education}
+\makerubric{employment}
+\makerubric{misc}
+\makerubric{awards}
+\makerubric{references}
+
+%
+%\makerubric{skills}
+%\makerubric{employment}
+%
+% If you're not a researcher nor an academic, you probably don't have any publications; delete this line.
+%% Sometimes when a section can't be nicely modeled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
+%\input{publications}
+%
+%
+%\makerubric{certs}
+
+
+
+%\makerubric{referee}
+% \input{referee-full}
+
+
+\end{document}
