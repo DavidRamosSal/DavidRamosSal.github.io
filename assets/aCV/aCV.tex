@@ -6,10 +6,48 @@
 % LianTze Lim (liantze@gmail.com)
 % 13 May, 2020
 %
+
 \documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+%% ********************************  Add from here  <<<<<<<<<<<<<
+\makeatletter
+\renewenvironment{rubric}[1]{%
+    \def\raggedright{%
+        \@rightskip\@flushglue\rightskip\@rightskip\leftskip\z@skip}%
+    \def\raggedleft{%
+        \rightskip\z@skip\leftskip\@flushglue\parfillskip\z@skip}%
+    \gdef\@beforespace{0pt}%
+    \gdef\@nextentry{}%
+    \gdef\@previouskey{}%
+    \global\let\old@newpage\newpage%
+    \global\let\old@pagebreak\pagebreak%
+    \global\let\old@nopagebreak\nopagebreak
+    \begin{longtable}{@{}kl@{~}X@{}}
+        \@rubrichead{#1}\\*[\rubricspace]
+        \endfirsthead
+        \noalign{\@rubricmark{#1}%
+            \global\let\in@newpage\newpage%
+            \global\let\in@pagebreak\pagebreak%
+            \global\let\in@nopagebreak\nopagebreak%
+            \gdef\newpage{\@nextentry\noalign{\gdef\@nextentry{}}\in@newpage}
+            \gdef\pagebreak{\@nextentry\noalign{\gdef\@nextentry{}}\in@pagebreak}
+            \gdef\nopagebreak{\@nextentry\noalign{\gdef\@nextentry{}}\in@nopagebreak}}}{%
+        \@nextentry
+    \end{longtable}\par\vspace\rubricafterspace
+    \global\let\newpage\old@newpage%
+    \global\let\pagebreak\old@pagebreak%
+    \global\let\nopagebreak\old@nopagebreak}
+\makeatother
+%%% *****************************************  TO HERE <<<<<<<<<<<<
+
 
 % Uncomment to enable Chinese; needs XeLaTeX
 % \usepackage{ctex}
+
+
+\usepackage{enumitem}
+\setlist[description]{font=\normalfont}
+%\setlist{nosep,after=\vspace{-\baselineskip}}
 
 \usepackage{settings}
 
@@ -33,9 +71,6 @@
 }
 \end{tikzpicture}%
 }
-
-%% Only needed if you want a Publication List
-\addbibresource{own-bib.bib}
 
 %% Specify your last name and first name (as given in the .bib) to automatically bold your own name in the publications list. One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly for now...
 \myname{Ramos Salamanca}{David\bibnamedelima Leonardo}
@@ -87,6 +122,8 @@
 \makerubric{education}
 \makerubric{employment}
 \makerubric{misc}
+\makerubric{other}
+\makerubric{skills}
 \makerubric{awards}
 \makerubric{references}
 
