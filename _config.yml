@@ -1,13 +1,13 @@
 ### Site Settings ###
 title               : David Ramos
 description         : >-
-                      Hi, I am David, I am a last-year Physics master's student at Universidad Industrial de Santander in Colombia.
+                      Hi, I am David, I am a Physicist from Colombia.
                       During my masters, I studied topological phases in classical magnetism using computer simulations.
-                      I am interested in computational physics and I am advocate for open science and open-source software.
+                      Nowadays, I am interested in Data Science and Data Analytics.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : DavidRamosSal/DavidRamosSal.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
-open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
+open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
 ### Plugins ###
