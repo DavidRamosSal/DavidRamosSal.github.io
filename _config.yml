@@ -11,8 +11,10 @@ open_new_tab        : true                             # Opens external URLs in 
 
 
 ### Plugins ###
+url: https://davidramossal.github.io/
 plugins:
   - jemoji
+  - jekyll-sitemap
 
 
 ### Navbar Settings ###
