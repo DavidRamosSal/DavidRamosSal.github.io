@@ -5,7 +5,7 @@
   {% assign image = page.image | default: site.author.image %}
 
   {% if page.name and page.collection == 'projects' %}
-    {% assign title = page.name | escape %}
+  {% assign title = page.name | escape %}
   {% endif %}
 
   <meta charset="utf-8">
@@ -36,5 +36,8 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="mMtuL6OS_Ab2J9xLBsaed-bHYGWkxzhpA6lmM8M6_cg" />
 
 </head>
