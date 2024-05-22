@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : David Ramos
 description         : >-
-                      Hi, I am David, I am a Physicist from Colombia.
+                      Hi, I am David, I am a Physicist from Colombia. 
                       During my masters, I studied topological phases in classical magnetism using computer simulations.
                       Nowadays, I am interested in Data Science and Data Analytics.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
