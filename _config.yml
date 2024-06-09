@@ -1,79 +1,72 @@
 ### Site Settings ###
-title               : David Ramos
-description         : >-
-                      Hi, I am David, I am a Physicist from Colombia. 
-                      During my masters, I studied topological phases in classical magnetism using computer simulations.
-                      Nowadays, I am interested in Data Science and Data Analytics.
-baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : DavidRamosSal/DavidRamosSal.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme        : YoussefRaafatNasry/portfolYOU
-open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
-
+title: David Ramos
+description: >-
+  Hi, I am David, I am a Physicist from Colombia. 
+  During my masters, I studied topological phases in classical magnetism using computer simulations.
+  Nowadays, I am interested in Data Science and Data Analytics.
+baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository: DavidRamosSal/DavidRamosSal.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+remote_theme: YoussefRaafatNasry/portfolYOU
+open_new_tab: false # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 ### Plugins ###
 url: https://davidramossal.github.io/
 plugins:
   - jemoji
   - jekyll-sitemap
-
+  - jekyll-feed
 
 ### Navbar Settings ###
-nav_exclude:                                            # The following paths are excluded from navbar
+nav_exclude: # The following paths are excluded from navbar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-  - documentation/partials/**                           # For Documentation Only
-
+  - documentation/partials/** # For Documentation Only
 
 ### Author Info ###
 author:
-  name              : David Ramos
-  image             : https://www.youris.com/imgpub/1908082/0/0/Text_image_third_paragraph.png
-#  behance           : your_username
-# dribbble          : your_username
-  email             : davidramossal@gmail.com
-#  facebook          : your_username
-  github            : davidramossal
-# gitlab            : your_username
-# instagram         : your_username
-# kaggle            : your_username
-  linkedin          : davidramossal
-#  medium            : your_username
-# soundcloud        : your_username
-# spotify           : your_username
-# stackoverflow     : your_user_id
-# tumblr            : your_username.tumblr.com
-# twitch            : your_username
-#  twitter           : your_username
-# vimeo             : your_username
-# youtube           : your_channel_name
-# keybase           : your_username
-
+  name: David Ramos
+  image: https://www.youris.com/imgpub/1908082/0/0/Text_image_third_paragraph.png
+  #  behance           : your_username
+  # dribbble          : your_username
+  email: davidramossal@gmail.com
+  #  facebook          : your_username
+  github: davidramossal
+  # gitlab            : your_username
+  # instagram         : your_username
+  # kaggle            : your_username
+  linkedin: davidramossal
+  #  medium            : your_username
+  # soundcloud        : your_username
+  # spotify           : your_username
+  # stackoverflow     : your_user_id
+  # tumblr            : your_username.tumblr.com
+  # twitch            : your_username
+  #  twitter           : your_username
+  # vimeo             : your_username
+  # youtube           : your_channel_name
+  # keybase           : your_username
 
 ### Posts ###
 permalink: /blog/:title
-
 
 ### Collections ###
 collections:
   projects:
     output: true
     permalink: /projects/:name
-  elements:                                             # For Documentation Only
-    output: true                                        # For Documentation Only
-
+  elements: # For Documentation Only
+    output: true # For Documentation Only
 
 ### Disqus ###
 disqus:
-  shortname: your-short-name-disqus                     # Your website Shortname on disqus
-
+  shortname: your-short-name-disqus # Your website Shortname on disqus
 
 ### Analytics ###
 analytics:
-  enabled: true                                        # Set true to enable analytics
+  enabled: true # Set true to enable analytics
   google:
     tracking_id: G-FDJMD573C4
-
 
 ### Buy me a coffee ###
 # See https://www.buymeacoffee.com/
@@ -81,9 +74,8 @@ buymeacoffee:
   enabled: false
   username: your_username
   color: "#007bff"
-  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+  message: "Thank you for visiting." # Message to be displayed aside from the button for a few seconds.
   description: "Support me on Buy me a coffee!"
-
 
 ### Defaults for collections ###
 defaults:
@@ -92,17 +84,16 @@ defaults:
       type: "projects"
     values:
       layout: "page"
-  - scope:                                              # For Documentation Only
-      path: ""                                          # For Documentation Only
-      type: "elements"                                  # For Documentation Only
-    values:                                             # For Documentation Only
-      layout: "element"                                 # For Documentation Only
+  - scope: # For Documentation Only
+      path: "" # For Documentation Only
+      type: "elements" # For Documentation Only
+    values: # For Documentation Only
+      layout: "element" # For Documentation Only
   - scope:
       path: ""
       type: "posts"
     values:
-      comments: false                                   # Set to true to enable disqus comments
-
+      comments: false # Set to true to enable disqus comments
 
 ### Exclude from processing ###
 exclude:
