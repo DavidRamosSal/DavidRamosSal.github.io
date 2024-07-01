@@ -50,8 +50,6 @@
         </a>
     
     </div>
-
-</div>
   
   {% include analytics.html %}
   {% include scripts.html %}
@@ -60,5 +58,14 @@
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
   {%- endif -%}
 </body>
+
+<footer class="mt-auto py-3 text-center">
+
+  <!-- Copyright notice -->
+  <div class="row justify-content-center align-items-center mt-4">
+    <small class="text-muted">© {{ site.author.name }} {{ site.time | date: "%Y" }}. Powered by <a href="https://jekyllrb.com/" class="text-muted">Jekyll</a> and <a href="https://github.com/YoussefRaafatNasry/portfolYOU" class="text-muted">PortfolYOU</a>.</small>
+  </div>
+  
+</footer>
 
 </html>
