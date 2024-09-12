@@ -1,5 +1,5 @@
 ### Site Settings ###
-title: David Ramos
+title: David Ramos Salamanca
 description: >-
   I am David, physicist and programmer. I love science, technology and music.
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
@@ -23,7 +23,7 @@ nav_exclude: # The following paths are excluded from navbar
 
 ### Author Info ###
 author:
-  name: David Ramos
+  name: David Ramos Salamanca
   image: https://www.youris.com/imgpub/1908082/0/0/Text_image_third_paragraph.png
   #  behance           : your_username
   # dribbble          : your_username
