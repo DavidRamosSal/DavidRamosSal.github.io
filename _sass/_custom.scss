@@ -1,0 +1,50 @@
+// Stack buttons and text for a cleaner mobile layout
+@media (max-width: 576px) {
+    .col-md-3, .col-md-6 {
+        width: 40%;
+        }
+}
+
+@media (max-width: 576px) {
+    .btn-light {
+        font-size: 0.75rem !important;  /* Smaller font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .button-text {
+        font-size: 0.75rem !important;  /* Smaller font size for mobile */
+    }
+    .button-text .m-3 {
+        margin: 0.5rem !important;  /* Adjust margin if needed */
+    }
+}
+
+
+// Adjust font sizes for mobile
+@media (max-width: 576px) {
+    h5, p {
+        font-size: 1rem;
+    }
+}
+
+// @media (max-width: 576px) {
+//     footer.mt-auto {
+//         margin-top: 0 !important; /* Override the auto margin on mobile */
+//     }
+
+//     footer .row {
+//         margin-top: 0 !important; /* Ensure no top margin within row */
+//     }
+// }
+
+@media (max-width: 576px) {
+    .social i {
+        font-size: 1.5rem !important; /* Reduce icon size on mobile */
+    }
+
+    .flex-shrink-0.container {
+        font-size: 0.875rem; /* Adjust font size for text */
+        margin-top: 0 !important; /* Adjust top margin for tighter spacing */
+    }
+}
