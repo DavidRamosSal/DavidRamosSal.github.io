@@ -10,46 +10,46 @@
 
 {% include head.html %}
 
-<body class="h-100 d-flex flex-column">
+<body class="min-vh-100 d-flex flex-column">
 
-  <main class="flex-shrink-0 container mt-5">
-    
-    <nav class="navbar navbar-expand-lg navbar-themed container">
-      <a class="navbar-brand" href="{{ site.baseurl }}/"><h5><b>{{ site.title }}</b></h5></a>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-themed container mt-5">
+    <a class="navbar-brand" href="{{ site.baseurl }}/"><h5><b>{{ site.title }}</b></h5></a>
+  </nav>
+
+  <main class="container my-auto">
 
     {{ content }} 
+
+    <div class="flex-shrink-0 container">
+      <div class="row justify-content-center align-items-center mt-4">
+  
+        {%- assign unfocused_color = "6c757d" -%}
+        
+        Find me on:
+        {% for account in site.author %}
+        
+          {%- assign service_name = account[0] -%}
+          {%- assign service_data = site.data.social-media[service_name] -%}
+          {%- if service_data -%}
+          <a class="social mx-3"  href="{{ service_data.url }}{{ account[1] }}"
+            style="color: #{{ unfocused_color }}"
+            onMouseOver="this.style.color='#{{ service_data.color }}'"
+            onMouseOut="this.style.color='#{{ unfocused_color }}'">
+            <i class="{{ service_data.icon }} fa-2x"></i>
+          </a>
+          {%- endif -%}
+        
+        {% endfor %}
+        <a class="social mx-3"  href="/feed.xml"
+            style="color: #{{ unfocused_color }}"
+            onMouseOver="this.style.color='#FF6600'"
+            onMouseOut="this.style.color='#{{ unfocused_color }}'">
+            <i class="fas fa-rss fa-2x"></i>
+          </a>
+      
+      </div>
     
   </main>
-  
-  <div class="flex-shrink-0 container">
-    <div class="row justify-content-center align-items-center mt-4">
-
-      {%- assign unfocused_color = "6c757d" -%}
-      
-      Find me on:
-      {% for account in site.author %}
-      
-        {%- assign service_name = account[0] -%}
-        {%- assign service_data = site.data.social-media[service_name] -%}
-        {%- if service_data -%}
-        <a class="social mx-3"  href="{{ service_data.url }}{{ account[1] }}"
-          style="color: #{{ unfocused_color }}"
-          onMouseOver="this.style.color='#{{ service_data.color }}'"
-          onMouseOut="this.style.color='#{{ unfocused_color }}'">
-          <i class="{{ service_data.icon }} fa-2x"></i>
-        </a>
-        {%- endif -%}
-      
-      {% endfor %}
-      <a class="social mx-3"  href="/feed.xml"
-          style="color: #{{ unfocused_color }}"
-          onMouseOver="this.style.color='#FF6600'"
-          onMouseOut="this.style.color='#{{ unfocused_color }}'">
-          <i class="fas fa-rss fa-2x"></i>
-        </a>
-    
-    </div>
   
   {% include analytics.html %}
   {% include scripts.html %}
@@ -59,7 +59,7 @@
   {%- endif -%}
 </body>
 
-<footer class="mt-auto py-3 text-center container">
+<footer class="py-3 text-center container">
 
   <!-- Copyright notice -->
   <div class="row justify-content-center align-items-center mt-4">
